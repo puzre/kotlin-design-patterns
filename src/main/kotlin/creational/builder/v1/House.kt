@@ -1,9 +1,9 @@
 package org.puzre.creational.builder.v1
 
 data class House private constructor(
-    val doors: Int?,
-    val windows: Int?,
-    val color: String?
+    val doors: Int? = null,
+    val windows: Int? = null,
+    val color: String? = null
 ) {
 
     companion object {
@@ -11,7 +11,10 @@ data class House private constructor(
     }
 
     override fun toString(): String {
-        return "House (doors = $doors, windows = $windows, color = $color)"
+        return "🏠 House\n" +
+                "Doors: ${doors ?: "Unknown"}\n" +
+                "Windows: ${windows ?: "Unknown"}\n" +
+                "Color: ${color ?: "Unknown"}"
     }
 
     data class Builder(

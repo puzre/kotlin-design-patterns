@@ -17,6 +17,8 @@ class BuilderV1Test {
             .color("Green")
             .build()
 
+        println(plant.toString())
+
         val expectedColor = "Green"
         val actualColor: String? = plant.color
 
@@ -33,6 +35,8 @@ class BuilderV1Test {
             .windows(2)
             .color("Blue")
             .build()
+
+        println(house.toString())
 
         val expectedColor = "Blue"
         val actualColor: String? = house.color

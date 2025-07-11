@@ -1,10 +1,10 @@
 package org.puzre.creational.builder.v1
 
 data class Plant private constructor(
-    val leafs: Int?,
-    val fruits: Int?,
-    val nodes: Int?,
-    val color: String?
+    val leafs: Int? = null,
+    val fruits: Int? = null,
+    val nodes: Int? = null,
+    val color: String? = null
 ) {
 
     companion object {
@@ -12,7 +12,11 @@ data class Plant private constructor(
     }
 
     override fun toString(): String {
-        return "Plan (leafs = $leafs, fruits = $fruits, nodes = $nodes, color = $color)"
+        return "🪴 Plan\n" +
+                "Leafs: ${leafs ?: "Unknown"}\n" +
+                "Fruits: ${fruits ?: "Unknown"}\n" +
+                "Nodes: ${nodes ?: "Unknown"}\n" +
+                "Color: ${color ?: "Unknown"}"
     }
 
     data class Builder(
